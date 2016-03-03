@@ -1,0 +1,45 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.health-meter {
+  border: 1px solid black;
+  width: 25%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: chartreuse;
+}
+
+.attack {
+  padding: 10px;
+}
+
+.minus-5 {
+  background-color: yellow;
+}
+
+.minus-10 {
+  background-color: orange;
+}
+
+.minus-15 {
+  background-color: red;
+}
+
+.minus-20 {
+  background-color: white;
+}
