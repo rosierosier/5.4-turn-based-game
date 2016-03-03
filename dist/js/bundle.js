@@ -22,10 +22,16 @@ console.log(soldier.health);
 
 
 function takeDamage(soldier){
-  soldier.health = (soldier.health / 4 * 3);
+  if (enemy.item = 'sword') {
+    soldier.health = (soldier.health / 4 * 3);
+  }
+  if (enemy.item = 'club') {
+    soldier.health = (soldier.health - 10);
+  };
 }
 
 $('.attack-button').on('click', function(){
+  //random pick of enemy items
   takeDamage(soldier);
   console.log(soldier.health);
 })
@@ -34,10 +40,8 @@ $('.attack-button').on('click', function(){
 $('.attack-button').on('click', function(){
   console.log('clicked');
   $('.health-meter').addClass('minus-5');
-  // alert('lost 5 points');
   $('.attack-button').on('click', function(){
     $('.health-meter').addClass('minus-10');
-    // alert('lost 5 more points');
     $('.attack-button').on('click', function(){
       $('.health-meter').addClass('minus-15');
       $('.attack-button').on('click', function(){
@@ -54,7 +58,6 @@ $('.attack-button').on('click', function(){
 //give attack button
 //setTimeout for enemy respond
 //if attacked, subtract 5 from health and add 5 to damage
-//if helped, remove 5 from damage
 //or maybe could just subtract from health each time attacked
 
 
