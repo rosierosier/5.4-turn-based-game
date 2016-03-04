@@ -77,28 +77,43 @@ $('#general').on('click', function(){
 // ####################################
 var attackButton = $('.attack-button');
 var enemyHealthMeter = $('.enemy-health-meter');
+// var newProgressBar = $('.progress-bar-striped');
+// var progressBar = {
+//   newProgressBar
+// }
+// console.log(progressBar);
 
 // ####################################
 //hero takes action
-//enemy takes action after 2 seconds
+//alert that enemy is attacking
+//enemy takes action after 1 second
 // ####################################
-
-
 attackButton.on('click', function heroAttacks(event){
-  console.log('clicked');
   enemyHealthMeter.addClass('minus-5');
   var timeout = setTimeout(function(){
     alert('enemy is attacking!');
     $('.health-meter').addClass('minus-5');
-  }, 2000)
+  }, 1000)
   attackButton.on('click', function(){
     enemyHealthMeter.addClass('minus-10');
+    // var timeout = setTimeout(function(){
+    //   alert('enemy is attacking!');
+    //   $('.health-meter').addClass('minus-10');
+    // }, 1000)
     attackButton.on('click', function(){
       enemyHealthMeter.addClass('minus-15');
+      // var timeout = setTimeout(function(){
+      //   alert('enemy is attacking!');
+      //   $('.health-meter').addClass('minus-15');
+      // }, 1000)
       attackButton.on('click', function(){
         enemyHealthMeter.addClass('minus-20');
-        alert('you win!');
-        document.location.reload(true);
+        // var timeout = setTimeout(function(){
+        //   alert('you win!');
+        // }, 1000)
+        var timeout2 = setTimeout(function(){
+          document.location.reload(true);
+        }, 2000)
       });
     });
   });
