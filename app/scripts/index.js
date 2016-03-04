@@ -42,51 +42,46 @@ enemyChoice();
 function takeDamage(playerOption){
   console.log(playerOption);
   console.log(enemyChoice);
-  if (enemyChoice < 0.51) {
-      enemyChoice = enemy;
-      $('.enemy-display').append('<img src="http://www.mascotdesigngallery.com/wp/wp-content/themes/pinboard/themify/img.php?src=http://www.mascotdesigngallery.com/wp/wp-content/uploads/2014/06/how-to-draw-funny-cartoons-goblin.jpg&w=280&h=&zc=1"/>')
+  if (enemyChoice = enemy) {
       playerOption.health = (playerOption.health - 10);
       enemy.health = (enemy.health - 10);
   }
   else {
-      enemyChoice = strongEnemy;
       playerOption.health = (playerOption.health / 4 * 3);
-      playerOption.health = (playerOption.health / 4 * 3);
+      enemy.health = (enemy.health / 4 * 3);
 
   };
 }
 
-function takeDamage(medic){
-  if (enemy.item = 'sword') {
-    medic.health = (medic.health / 4 * 3);
-  }
-  if (enemy.item = 'club') {
-    medic.health = (medic.health - 10);
-  };
-}
-
-function takeDamage(general){
-  if (enemy.item = 'sword') {
-    general.health = (general.health / 4 * 3);
-  }
-  if (enemy.item = 'club') {
-    general.health = (general.health - 10);
-  };
-}
-
-
+// function takeDamage(medic){
+//   if (enemy.item = 'sword') {
+//     medic.health = (medic.health / 4 * 3);
+//   }
+//   if (enemy.item = 'club') {
+//     medic.health = (medic.health - 10);
+//   };
+// }
+//
+// function takeDamage(general){
+//   if (enemy.item = 'sword') {
+//     general.health = (general.health / 4 * 3);
+//   }
+//   if (enemy.item = 'club') {
+//     general.health = (general.health - 10);
+//   };
+// }
 
 
-function takeAction(){
-
-}
 
 
+
+
+//show dropdown menu on click
 $('.dropdown').on('click', function(){
   $('.dropdown-menu').show();
 });
 
-
+//display hero image on click & hide dropdown menu
 $('#soldier').on('click', function(){
   $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/soldier-icon.png"/>')
   $('.dropdown-menu').addClass('hide');
@@ -111,33 +106,33 @@ $('#general').on('click', function(){
   return general;
 });
 
-
-
-
+var attackButton = $('.attack-button');
+var enemyHealthMeter = $('.enemy-health-meter');
 //soldier attacks and takesDamage (needs to have a setTimeout for damage to show)
-$('.attack-button').on('click', function(){
-  //random pick of enemy items
-  takeDamage(soldier);
-  console.log(soldier.health);
-})
+// attackButton.on('click', function(){
+//   takeDamage(soldier);
+//   console.log(soldier.health);
+// })
 
-
-$('.attack-button').on('click', function(){
+//hero takes action
+attackButton.on('click', function(){
   console.log('clicked');
-  $('.health-meter').addClass('minus-5');
-  $('.attack-button').on('click', function(){
-    $('.health-meter').addClass('minus-10');
-    $('.attack-button').on('click', function(){
-      $('.health-meter').addClass('minus-15');
-      $('.attack-button').on('click', function(){
-        $('.health-meter').addClass('minus-20');
-        alert('you lose');
+  enemyHealthMeter.addClass('minus-5');
+  attackButton.on('click', function(){
+    enemyHealthMeter.addClass('minus-10');
+    attackButton.on('click', function(){
+      enemyHealthMeter.addClass('minus-15');
+      attackButton.on('click', function(){
+        enemyHealthMeter.addClass('minus-20');
+        alert('you win!');
+        document.location.reload(true);
       });
     });
   });
-})
+});
 
-
+//enemy takes action
+function 
 
 
 //give attack button
