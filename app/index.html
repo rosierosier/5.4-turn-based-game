@@ -3,28 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>5 4 turn based game</title>
+    <title>Battle</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
     <div class="container">
       <header class="row">
-        <div class="col-md-4">
-          <ul>
-            <li><button id="soldier">Soldier</button></li>
-            <li><button id="medic">Medic</button></li>
-            <li><button id="general">General</button></li>
-          </ul>
+        <div class="attack-row col-sm-12 col-xs-12">
+          <button class="attack-button">Fight!</button>
         </div>
       </header>
       <div class="row">
-        <div class="col-md-4">
-          <div class="health-meter"></div>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Choose Your Hero
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#" id="soldier">Soldier</a></li>
+            <li><a href="#" id="medic">Medic</a></li>
+            <li><a href="#" id="general">General</a></li>
+            <!-- <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li> -->
+          </ul>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <button class="attack-button">Attack</button>
+        <div class="col-sm-12">
+          <div class="player-choice col-sm-6 col-xs-6">
+            <h1>Heroes</h1>
+            <div class="health-meter"></div>
+            <div class="player-display">
+            </div>
+          </div>
+          <div class="health col-sm-6 col-xs-6">
+            <h1>Enemy</h1>
+            <div class="enemy-health-meter"></div>
+            <div class="enemy-display">
+            </div>
+          </div>
         </div>
       </div>
     </div>
