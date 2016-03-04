@@ -11,13 +11,15 @@ function Player(kind, health, damage, items){
 // Player.prototype.damage = 0;
 
 var soldier = new Player('soldier');
-var medic = new Player('medic', 50);
+var medic = new Player('medic', 70);
 var general = new Player('general', 200);
 
-var enemy = new Player('enemy');
+var enemy = new Player('enemy', 50);
+var strongEnemy = new Player('enemy', 100);
 
 console.log(soldier.health);
-
+console.log(medic.health);
+console.log(general.health);
 
 function takeDamage(soldier){
   if (enemy.item = 'sword') {
@@ -28,6 +30,25 @@ function takeDamage(soldier){
   };
 }
 
+function takeDamage(medic){
+  if (enemy.item = 'sword') {
+    medic.health = (medic.health / 4 * 3);
+  }
+  if (enemy.item = 'club') {
+    medic.health = (medic.health - 10);
+  };
+}
+
+function takeDamage(general){
+  if (enemy.item = 'sword') {
+    general.health = (general.health / 4 * 3);
+  }
+  if (enemy.item = 'club') {
+    general.health = (general.health - 10);
+  };
+}
+
+//soldier attacks and takesDamage (needs to have a setTimeout for damage to show)
 $('.attack-button').on('click', function(){
   //random pick of enemy items
   takeDamage(soldier);

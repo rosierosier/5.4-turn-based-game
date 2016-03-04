@@ -7,9 +7,27 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-
-    <div class="health-meter"></div>
-    <button class="attack-button">Attack</button>
+    <div class="container">
+      <header class="row">
+        <div class="col-md-4">
+          <ul>
+            <li><button id="soldier">Soldier</button></li>
+            <li><button id="medic">Medic</button></li>
+            <li><button id="general">General</button></li>
+          </ul>
+        </div>
+      </header>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="health-meter"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <button class="attack-button">Attack</button>
+        </div>
+      </div>
+    </div>
 
     <script src="js/bundle.js"></script>
   </body>

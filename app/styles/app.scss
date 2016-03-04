@@ -19,7 +19,7 @@ img {
 .health-meter {
   border: 1px solid black;
   width: 25%;
-  height: 50px;
+  height: 25px;
   border-radius: 5px;
   background-color: chartreuse;
 }
@@ -42,4 +42,10 @@ img {
 
 .minus-20 {
   background-color: white;
+}
+
+header ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
 }
