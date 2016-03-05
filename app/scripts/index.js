@@ -11,16 +11,18 @@ function Player(kind, health, damage, items){
 // Player.prototype.health = 100;
 // Player.prototype.damage = 0;
 
-var soldier = new Player('soldier');
-var medic = new Player('medic', 70);
-var general = new Player('general', 200);
+var prince = new Player('prince');
+var princess = new Player('princess', 70);
+var boy = new Player('boy', 125);
+var king = new Player('king', 200);
 var enemy = new Player('enemy', 50);
 var strongEnemy = new Player('enemy', 100);
 
 var playerOption = {
-  soldier,
-  medic,
-  general
+  prince,
+  princess,
+  boy,
+  king
 }
 // ####################################
 //enemy is chosen randomly on page load
@@ -29,10 +31,10 @@ function enemyChoice(){
   var enemyChoice = Math.random();
   if (enemyChoice < 0.51) {
       enemyChoice = enemy;
-      $('.enemy-display').append('<img src="http://worldartsme.com/images/scary-beast-clipart-1.jpg"/>')
+      $('.enemy-display').append('<img src="http://4vector.com/i/free-vector-cartoon-dragon-image-04-vector_094069_4.jpg"/>')
   } else {
     enemyChoice = strongEnemy;
-    $('.enemy-display').append('<img src="http://www.mascotdesigngallery.com/wp/wp-content/themes/pinboard/themify/img.php?src=http://www.mascotdesigngallery.com/wp/wp-content/uploads/2014/06/how-to-draw-funny-cartoons-goblin.jpg&w=280&h=&zc=1"/>')
+    $('.enemy-display').append('<img src="http://images.all-free-download.com/images/graphiclarge/cute_cartoon_dragon_02_vector_156461.jpg"/>')
   };
   console.log(enemyChoice);
 }
@@ -48,28 +50,34 @@ $('.dropdown').on('click', function(){
 // ####################################
 //display hero image on click & hide dropdown menu
 // ####################################
-$('#soldier').on('click', function(){
-  $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/soldier-icon.png"/>')
+$('#prince').on('click', function(){
+  $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/knight-icon.png"/>')
   $('.dropdown-menu').addClass('hide');
-  var playerOption = soldier;
+  var playerOption = prince;
   console.log(playerOption);
-  return soldier;
+  return prince;
 });
 
-// $('#medic').on('click', function(){
-//   $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/soldier-icon.png"/>')
-//   $('.dropdown-menu').addClass('hide');
-//   var playerOption = medic;
-//   console.log(playerOption);
-//   return medic;
-// });
-
-$('#general').on('click', function(){
-  $('.player-display').append('<img src="http://png.clipart.me/graphics/thumbs/154/general-officer_154122491.jpg"/>')
+$('#princess').on('click', function(){
+  $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/princess-icon.png"/>')
   $('.dropdown-menu').addClass('hide');
-  var playerOption = general;
+  var playerOption = princess;
+  console.princess;
+});
+
+$('#boy').on('click', function(){
+  $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/kid-icon.png"/>')
+  $('.dropdown-menu').addClass('hide');
+  var playerOption = boy;
+  console.boy;
+});
+
+$('#king').on('click', function(){
+  $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/king-icon.png"/>')
+  $('.dropdown-menu').addClass('hide');
+  var playerOption = king;
   console.log(playerOption);
-  return general;
+  return king;
 });
 
 // ####################################
@@ -114,7 +122,7 @@ attackButton.on('click', function heroAttacks(event){
         alert('enemy is attacking!');
         playerhealth.value = playerhealth.value - 10;
       }, 1000)
-      
+
       attackButton.on('click', function(){
         enemyhealth.value = enemyhealth.value - 10;
         var timeout = setTimeout(function(){

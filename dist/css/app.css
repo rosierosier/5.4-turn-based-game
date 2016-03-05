@@ -5817,6 +5817,19 @@ button.close {
 img {
   max-width: 100%; }
 
+.castle {
+  background: url("http://orig12.deviantart.net/1039/f/2010/304/f/a/cartoon_castle_scene_by_rasulh-d31vi8o.jpg");
+  height: 200px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto; }
+
+.dropdown {
+  margin-top: 15px;
+  margin-left: 15px; }
+
 .health {
   padding-right: 0;
   padding-left: 0; }
@@ -5860,7 +5873,8 @@ progress[value]::-webkit-progress-value {
   background-size: 40px 40px; }
 
 progress[value]::-moz-progress-bar {
-  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-color: #5cb85c; }
 
 progress .enemy-progress-bar {
   width: 100%;
@@ -5887,18 +5901,6 @@ progress .enemy-progress-bar {
   display: inline-block;
   position: relative; }
 
-.minus-5 {
-  background-color: yellow; }
-
-.minus-10 {
-  background-color: orange; }
-
-.minus-15 {
-  background-color: red; }
-
-.minus-20 {
-  background-color: white; }
-
 ul {
   padding-right: 0;
   padding-left: 0; }
@@ -5909,19 +5911,31 @@ ul li {
 
 .player-display {
   width: 100%;
-  height: 50px; }
+  height: 350px;
+  margin: 0 auto; }
 
 .player-display img {
   width: 256px;
-  height: 256px; }
+  height: 256px;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: white; }
 
 .enemy-display {
   width: 100%;
-  height: 50px; }
+  height: 350px;
+  margin: 0 auto; }
 
 .enemy-display img {
   width: 256px;
-  height: 256px; }
+  height: 256px;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: white; }
 
 .hide {
   display: none; }
