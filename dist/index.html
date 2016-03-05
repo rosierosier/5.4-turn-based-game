@@ -16,7 +16,7 @@
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li><a href="#" id="soldier">Soldier</a></li>
-            <li><a href="#" id="medic">Medic</a></li>
+            <!-- <li><a href="#" id="medic">Medic</a></li> -->
             <li><a href="#" id="general">General</a></li>
             <!-- <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li> -->
@@ -33,11 +33,7 @@
           <div class="player-choice col-sm-6 col-xs-6">
             <h1>Hero</h1>
             <div class="health-meter">
-              <!-- <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                  <span class="sr-only">100% Complete (success)</span>
-                </div>
-              </div> -->
+              <progress id="player-progress-bar" value="100" max="100"></progress>
             </div>
             <div class="player-display">
             </div>
@@ -45,11 +41,7 @@
           <div class="health col-sm-6 col-xs-6">
             <h1>Enemy</h1>
             <div class="enemy-health-meter">
-              <!-- <div class="progress">
-                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                  <span class="sr-only">100% Complete (success)</span>
-                </div>
-              </div> -->
+                <progress id="enemy-progress-bar" value="100" max="100"></progress>
             </div>
             <div class="enemy-display">
             </div>

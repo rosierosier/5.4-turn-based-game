@@ -56,13 +56,13 @@ $('#soldier').on('click', function(){
   return soldier;
 });
 
-$('#medic').on('click', function(){
-  $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/soldier-icon.png"/>')
-  $('.dropdown-menu').addClass('hide');
-  var playerOption = medic;
-  console.log(playerOption);
-  return medic;
-});
+// $('#medic').on('click', function(){
+//   $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/soldier-icon.png"/>')
+//   $('.dropdown-menu').addClass('hide');
+//   var playerOption = medic;
+//   console.log(playerOption);
+//   return medic;
+// });
 
 $('#general').on('click', function(){
   $('.player-display').append('<img src="http://png.clipart.me/graphics/thumbs/154/general-officer_154122491.jpg"/>')
@@ -74,12 +74,20 @@ $('#general').on('click', function(){
 
 // ####################################
 var attackButton = $('.attack-button');
-var enemyHealthMeter = $('.enemy-health-meter');
-// var newProgressBar = $('.progress-bar-striped');
-// var progressBar = {
-//   newProgressBar
-// }
-// console.log(progressBar);
+// var enemyHealth = $('.enemy-progress-bar-striped');
+// var playerHealth = $('.player-progress-bar');
+
+// ####################################
+//progress bars
+// ####################################
+var enemyhealth = document.getElementById("enemy-progress-bar")
+console.log(enemyhealth);
+// enemyhealth.value = enemyhealth.value - 10;
+// console.log(enemyhealth.value);
+var playerhealth = document.getElementById("player-progress-bar")
+
+
+
 
 // ####################################
 //hero takes action
@@ -87,28 +95,31 @@ var enemyHealthMeter = $('.enemy-health-meter');
 //enemy takes action after 1 second
 // ####################################
 attackButton.on('click', function heroAttacks(event){
-  enemyHealthMeter.addClass('minus-5');
+  enemyhealth.value = enemyhealth.value - 10;
   var timeout = setTimeout(function(){
     alert('enemy is attacking!');
-    $('.health-meter').addClass('minus-5');
+    playerhealth.value = playerhealth.value - 10;
   }, 1000)
+
   attackButton.on('click', function(){
-    enemyHealthMeter.addClass('minus-10');
-    // var timeout = setTimeout(function(){
-    //   alert('enemy is attacking!');
-    //   $('.health-meter').addClass('minus-10');
-    // }, 1000)
+    enemyhealth.value = enemyhealth.value - 10;
+    var timeout = setTimeout(function(){
+      alert('enemy is attacking!');
+      playerhealth.value = playerhealth.value - 10;
+    }, 1000)
+
     attackButton.on('click', function(){
-      enemyHealthMeter.addClass('minus-15');
-      // var timeout = setTimeout(function(){
-      //   alert('enemy is attacking!');
-      //   $('.health-meter').addClass('minus-15');
-      // }, 1000)
+      enemyhealth.value = enemyhealth.value - 10;
+      var timeout = setTimeout(function(){
+        alert('enemy is attacking!');
+        playerhealth.value = playerhealth.value - 10;
+      }, 1000)
+      
       attackButton.on('click', function(){
-        enemyHealthMeter.addClass('minus-20');
-        // var timeout = setTimeout(function(){
-        //   alert('you win!');
-        // }, 1000)
+        enemyhealth.value = enemyhealth.value - 10;
+        var timeout = setTimeout(function(){
+          alert('you win!');
+        }, 1000)
         var timeout2 = setTimeout(function(){
           document.location.reload(true);
         }, 2000)
