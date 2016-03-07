@@ -13,8 +13,8 @@ function Player(kind, health, damage, items){
 
 var prince = new Player('prince');
 var princess = new Player('princess', 70);
-var boy = new Player('boy', 125);
-var king = new Player('king', 200);
+var boy = new Player('boy', 100);
+var king = new Player('king', 90);
 var enemy = new Player('enemy', 50);
 var strongEnemy = new Player('enemy', 100);
 
@@ -24,6 +24,22 @@ var playerOption = {
   boy,
   king
 }
+
+// ####################################
+var attackButton = $('.attack-button');
+// var enemyHealth = $('.enemy-progress-bar-striped');
+// var playerHealth = $('.player-progress-bar');
+
+// ####################################
+//progress bars
+// ####################################
+var enemyhealth = document.getElementById("enemy-progress-bar")
+console.log(enemyhealth);
+// enemyhealth.value = enemyhealth.value - 10;
+// console.log(enemyhealth.value);
+var playerhealth = document.getElementById("player-progress-bar")
+
+
 // ####################################
 //enemy is chosen randomly on page load
 // ####################################
@@ -49,6 +65,7 @@ $('.dropdown').on('click', function(){
 
 // ####################################
 //display hero image on click & hide dropdown menu
+//player choice changes value of health meter
 // ####################################
 $('#prince').on('click', function(){
   $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/knight-icon.png"/>')
@@ -62,6 +79,7 @@ $('#princess').on('click', function(){
   $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/princess-icon.png"/>')
   $('.dropdown-menu').addClass('hide');
   var playerOption = princess;
+  playerhealth.value = playerhealth.value - 30;
   console.princess;
 });
 
@@ -76,25 +94,10 @@ $('#king').on('click', function(){
   $('.player-display').append('<img src="http://icons.iconarchive.com/icons/martin-berube/people/256/king-icon.png"/>')
   $('.dropdown-menu').addClass('hide');
   var playerOption = king;
+  playerhealth.value = playerhealth.value - 10;
   console.log(playerOption);
   return king;
 });
-
-// ####################################
-var attackButton = $('.attack-button');
-// var enemyHealth = $('.enemy-progress-bar-striped');
-// var playerHealth = $('.player-progress-bar');
-
-// ####################################
-//progress bars
-// ####################################
-var enemyhealth = document.getElementById("enemy-progress-bar")
-console.log(enemyhealth);
-// enemyhealth.value = enemyhealth.value - 10;
-// console.log(enemyhealth.value);
-var playerhealth = document.getElementById("player-progress-bar")
-
-
 
 
 // ####################################
