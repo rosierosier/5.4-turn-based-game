@@ -109,21 +109,21 @@ $('#king').on('click', function(){
 attackButton.on('click', function heroAttacks(event){
   enemyhealth.value = enemyhealth.value - 10;
   var timeout = setTimeout(function(){
-    alert('enemy is attacking!');
+    // alert('enemy is attacking!');
     playerhealth.value = playerhealth.value - 10;
   }, 1000)
 
   attackButton.on('click', function(){
     enemyhealth.value = enemyhealth.value - 10;
     var timeout = setTimeout(function(){
-      alert('enemy is attacking!');
+      // alert('enemy is attacking!');
       playerhealth.value = playerhealth.value - 10;
     }, 1000)
 
     attackButton.on('click', function(){
       enemyhealth.value = enemyhealth.value - 10;
       var timeout = setTimeout(function(){
-        alert('enemy is attacking!');
+        // alert('enemy is attacking!');
         playerhealth.value = playerhealth.value - 10;
       }, 1000)
 
