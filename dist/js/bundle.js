@@ -114,31 +114,31 @@ attackButton.on('click', function heroAttacks(event){
     playerhealth.value = playerhealth.value - 10;
   }, 1000)
 
-  // attackButton.on('click', function(){
-  //   enemyhealth.value = enemyhealth.value - 10;
-  //   var timeout = setTimeout(function(){
-  //     alert('enemy is attacking!');
-  //     playerhealth.value = playerhealth.value - 10;
-  //   }, 1000)
-  //
-  //   attackButton.on('click', function(){
-  //     enemyhealth.value = enemyhealth.value - 10;
-  //     var timeout = setTimeout(function(){
-  //       alert('enemy is attacking!');
-  //       playerhealth.value = playerhealth.value - 10;
-  //     }, 1000)
-  //
-  //     attackButton.on('click', function(){
-  //       enemyhealth.value = enemyhealth.value - 10;
-  //       var timeout = setTimeout(function(){
-  //         alert('you win!');
-  //       }, 1000)
-  //       var timeout2 = setTimeout(function(){
-  //         document.location.reload(true);
-  //       }, 2000)
-  //     });
-  //   });
-  // });
+  attackButton.on('click', function(){
+    enemyhealth.value = enemyhealth.value - 10;
+    var timeout = setTimeout(function(){
+      alert('enemy is attacking!');
+      playerhealth.value = playerhealth.value - 10;
+    }, 1000)
+
+    attackButton.on('click', function(){
+      enemyhealth.value = enemyhealth.value - 10;
+      var timeout = setTimeout(function(){
+        alert('enemy is attacking!');
+        playerhealth.value = playerhealth.value - 10;
+      }, 1000)
+
+      attackButton.on('click', function(){
+        enemyhealth.value = enemyhealth.value - 10;
+        var timeout = setTimeout(function(){
+          alert('you win!');
+        }, 1000)
+        var timeout2 = setTimeout(function(){
+          document.location.reload(true);
+        }, 2000)
+      });
+    });
+  });
 });
 
 },{"jquery":2}],2:[function(require,module,exports){
