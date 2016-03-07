@@ -48,6 +48,7 @@ function enemyChoice(){
   if (enemyChoice < 0.51) {
       enemyChoice = enemy;
       $('.enemy-display').append('<img src="http://4vector.com/i/free-vector-cartoon-dragon-image-04-vector_094069_4.jpg"/>')
+      enemyhealth.value = enemyhealth.value - 50;
   } else {
     enemyChoice = strongEnemy;
     $('.enemy-display').append('<img src="http://images.all-free-download.com/images/graphiclarge/cute_cartoon_dragon_02_vector_156461.jpg"/>')
